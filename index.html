@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application Tracker</title>
     <!-- talwind.css -->
     <link href="./src/output.css" rel="stylesheet">
     <!-- font -->
@@ -14,9 +14,46 @@
         }
     </style>
      <!-- style -->
-     
 </head>
 <body>
-    
+    <!--header  -->
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-2xl font-bold text-[#002C5C] mt-3 ">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-3 gap-4 mt-4">
+                <!-- cart1 -->
+                <div class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+                    <div class="card-body">
+                        <p>Total</p>
+                        <p id="total" class="text-2xl font-bold">0</p>
+                    </div>
+                </div>
+                <!-- cart2 -->
+                <div class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+                    <div class="card-body">
+                        <p>Interview</p>
+                        <p id="Interview" class="text-2xl text-green-500 font-bold">0</p>
+                    </div>
+                </div>
+                <!-- cart3 -->
+                <div class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+                    <div class="card-body">
+                        <p>Rejected</p>
+                        <p id="Rejected" class="text-2xl text-red-500 font-bold">0</p>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <hr class="my-5 mt-4 w-[80%] mx-auto">
+    <!-- main Section -->
+     <main>
+        <div class="mx-auto w-[80%]" >
+            
+            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">All</button>
+            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">Interview</button>
+            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">Rejected</button>
+
+        </div>
+     </main>
 </body>
 </html>
