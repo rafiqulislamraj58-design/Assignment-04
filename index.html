@@ -22,9 +22,9 @@
     <header class="w-[80%] mx-auto">
         <h1 class="text-2xl font-bold text-[#002C5C] mt-3 ">Job Application Tracker</h1>
 
-        <div class="grid grid-cols-3 gap-4 mt-4">
+        <div  class="grid grid-cols-3 gap-4 mt-4">
                 <!-- cart1 -->
-                <div class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+                <div  class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                     <div class="card-body">
                         <p>Total</p>
                         <p id="total" class="text-2xl font-bold">0</p>
@@ -60,7 +60,7 @@
             <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">Rejected</button>
           </div>
         </div>
-        <div class="jobcontainer mt-3 grid grid-cols-1 gap-4">
+        <div id="card" class="jobcontainer mt-3 grid grid-cols-1 gap-4">
             <!-- cart-01 -->
             <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
@@ -69,11 +69,13 @@
                             <h3 class="font-bold text-2xl">Mobile First Corp</h3>
                             <p class="text-gray-500">React Native Developer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                        <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Remote.Full-time.$130,000 - $175,000 </p>
                    <div class="contains">
@@ -97,11 +99,13 @@
                             <h3 class="font-bold text-2xl">WebFlow Agency</h3>
                             <p class="text-gray-500">Web Designer & Developer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                
                    </div>
                    <p>Remote.Full-time.$120,000 - $165,000 </p>
                    <div class="contains">
@@ -125,11 +129,13 @@
                             <h3 class="font-bold text-2xl">DataViz Solutions</h3>
                             <p class="text-gray-500">Data Visualization Specialist</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Boston, MA.Full-time.$160,000 - $155,000 </p>
                    <div class="contains">
@@ -153,11 +159,13 @@
                             <h3 class="font-bold text-2xl">CloudFirst Inc</h3>
                             <p class="text-gray-500">Backend Developer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Remote.Full-time.$150,000 - $175,000 </p>
                    <div class="contains">
@@ -181,11 +189,13 @@
                             <h3 class="font-bold text-2xl">Innovation Labs</h3>
                             <p class="text-gray-500">UI/UX Engineer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Austin, TX.Full-time.$140,000 - $185,000 </p>
                    <div class="contains">
@@ -209,11 +219,13 @@
                             <h3 class="font-bold text-2xl">MegaCorp Solutions</h3>
                             <p class="text-gray-500">JavaScript Developer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Remote.Full-time.$160,000 - $195,000 </p>
                    <div class="contains">
@@ -237,11 +249,13 @@
                             <h3 class="font-bold text-2xl">StartupXYZ</h3>
                             <p class="text-gray-500">Full Stack Engineer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Remote.Full-time.$130,000 - $175,000 </p>
                    <div class="contains">
@@ -265,11 +279,13 @@
                             <h3 class="font-bold text-2xl">TechCorp Industries</h3>
                             <p class="text-gray-500">Senior Frontend Developer</p>
                         </div>
-                        <div class="card-icon">
-                            <div id="delate" class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
+                         <button id="delete">
+                            <div class="card-icon">
+                            <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
                             </div>
-                        </div>                   
+                        </div> 
+                        </button>                  
                    </div>
                    <p>Remote.Full-time.$160,000 - $185,000 </p>
                    <div class="contains">
@@ -286,5 +302,6 @@
                         
         </div>
      </main>
+     <script src="./script.js/script.js"></script>
 </body>
 </html>
