@@ -54,22 +54,22 @@
                 <h3 class="text-2xl font-bold text-black ">Available Jobs</h3>
                 <p id="jobCount"  class=" text-gray-500">0 jobs</p>
             </div>
-          <div class="">
-            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">All</button>
-            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">Interview</button>
-            <button class="btn bg-white-400 btn-soft text-gray-500 btn-info hover:text-white ">Rejected</button>
+          <div >
+            <button onclick="toggleStyle('allFilter')" id="allFilter" class="bg-info btn bg-white-400  text-gray-500 hover:text-white ">All</button>
+            <button onclick="toggleStyle('interviewFilter')" id="interviewFilter" class="btn bg-white-400  text-gray-500 hover:text-white ">Interview</button>
+            <button onclick="toggleStyle('rejectedFilter')" id="rejectedFilter" class="btn bg-white-400  text-gray-500 hover:text-white ">Rejected</button>
           </div>
         </div>
         <div id="card" class="jobcontainer mt-3 grid grid-cols-1 gap-4">
             <!-- cart-01 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">Mobile First Corp</h3>
-                            <p class="text-gray-500">React Native Developer</p>
+                            <p class="job-tittle text-gray-500">React Native Developer</p>
                         </div>
-                        <button id="delete">
+                        <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -77,10 +77,10 @@
                         </div> 
                         </button>                  
                    </div>
-                   <p>Remote.Full-time.$130,000 - $175,000 </p>
+                   <p class="salary">Remote.Full-time.$130,000 - $175,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -92,14 +92,14 @@
                  
             </div>
             <!-- cart-02 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">WebFlow Agency</h3>
-                            <p class="text-gray-500">Web Designer & Developer</p>
+                            <p class="job-tittle text-gray-500">Web Designer & Developer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -107,10 +107,10 @@
                         </div> 
                         </button>                
                    </div>
-                   <p>Remote.Full-time.$120,000 - $165,000 </p>
+                   <p class="salary">Remote.Full-time.$120,000 - $165,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -122,14 +122,14 @@
                  
             </div>
             <!-- cart-03 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">DataViz Solutions</h3>
-                            <p class="text-gray-500">Data Visualization Specialist</p>
+                            <p class="job-tittle text-gray-500">Data Visualization Specialist</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -139,8 +139,8 @@
                    </div>
                    <p>Boston, MA.Full-time.$160,000 - $155,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -152,14 +152,14 @@
                  
             </div>
             <!-- cart-04 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">CloudFirst Inc</h3>
-                            <p class="text-gray-500">Backend Developer</p>
+                            <p class="job-tittle text-gray-500">Backend Developer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -167,10 +167,10 @@
                         </div> 
                         </button>                  
                    </div>
-                   <p>Remote.Full-time.$150,000 - $175,000 </p>
+                   <p class="salary">Remote.Full-time.$150,000 - $175,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -182,14 +182,14 @@
                  
             </div>
             <!-- cart-05 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">Innovation Labs</h3>
-                            <p class="text-gray-500">UI/UX Engineer</p>
+                            <p class="job-tittle text-gray-500">UI/UX Engineer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -199,8 +199,8 @@
                    </div>
                    <p>Austin, TX.Full-time.$140,000 - $185,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -212,14 +212,14 @@
                  
             </div>
             <!-- cart-06 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">MegaCorp Solutions</h3>
-                            <p class="text-gray-500">JavaScript Developer</p>
+                            <p class="job-tittle text-gray-500">JavaScript Developer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -227,10 +227,10 @@
                         </div> 
                         </button>                  
                    </div>
-                   <p>Remote.Full-time.$160,000 - $195,000 </p>
+                   <p class="salary">Remote.Full-time.$160,000 - $195,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -242,14 +242,14 @@
                  
             </div>
             <!-- cart-07 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">StartupXYZ</h3>
-                            <p class="text-gray-500">Full Stack Engineer</p>
+                            <p class="job-tittle text-gray-500">Full Stack Engineer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -257,10 +257,10 @@
                         </div> 
                         </button>                  
                    </div>
-                   <p>Remote.Full-time.$130,000 - $175,000 </p>
+                   <p class="salary">Remote.Full-time.$130,000 - $175,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     <div class="buttons-container mt-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>
@@ -272,14 +272,14 @@
                  
             </div>
             <!-- cart-08 -->
-            <div class="card card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
                             <h3 class="font-bold text-2xl">TechCorp Industries</h3>
                             <p class="text-gray-500">Senior Frontend Developer</p>
                         </div>
-                         <button id="delete">
+                         <button class="delete">
                             <div class="card-icon">
                             <div  class="circle rounded-full bg-white-400  text-gray-400 border border-gray-400 w-6 h-6  flex items-center justify-center hover:text-red-500/65 cursor-pointer">
                                 <i class='bx bx-trash'></i>
@@ -287,12 +287,12 @@
                         </div> 
                         </button>                  
                    </div>
-                   <p>Remote.Full-time.$160,000 - $185,000 </p>
+                   <p class="salary">Remote.Full-time.$160,000 - $185,000 </p>
                    <div class="contains">
-                    <button>Not Applied</button>
-                    <p class="text-gray-500">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <button class="apply-status">Not Applied</button>
+                    <p class="job-Info text-gray-500">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     <div class="buttons-container mt-3">
-                        <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
+                        <div class=" badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary hover:translate-y-0.5">Rejected</div>                   
                     </div>
                  </div>        
