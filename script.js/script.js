@@ -67,13 +67,9 @@ function updateCount() {
         
         if(card.querySelector('.apply-status').innerText==='Interview'){
             interviwCount++;
-          
-            
-            
+     
         }else if(card.querySelector('.apply-status').innerText==='Rejected'){
             rejectedCount++;
-            
-
         }
         
 }
