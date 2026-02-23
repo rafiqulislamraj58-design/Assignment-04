@@ -20,6 +20,7 @@ document.getElementById('card').addEventListener('click',function(e){
             document.querySelector('#nojobs').style.display='block'
         }
         updatedJobs()
+        updateCount()
     }
 })
 // toggle style
@@ -62,6 +63,7 @@ function updateCount() {
      let cards = document.querySelectorAll('.card1');
     let interviwCount= 0;
     let rejectedCount= 0;
+    let visibaleCount = 0;
     
     for (const card of cards) {
         
@@ -71,8 +73,16 @@ function updateCount() {
         }else if(card.querySelector('.apply-status').innerText==='Rejected'){
             rejectedCount++;
         }
-        
+        if (card.style.display!=='none') {
+            visibaleCount++
+        }
+      
 }
+  if (visibaleCount===0) {
+            document.querySelector('#nojobs').style.display='block';
+        }else{
+            document.querySelector('#nojobs').style.display='none';
+        }
 
     appliedJob.innerText = interviwCount;
     rejectedJob.innerText = rejectedCount;
