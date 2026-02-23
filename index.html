@@ -24,10 +24,10 @@
 </head>
 <body>
     <!--header  -->
-    <header class="w-[80%] mx-auto">
-        <h1 class="text-2xl font-bold text-[#002C5C] mt-3 ">Job Application Tracker</h1>
+    <header class="sm: w-[85%] lg:w-[80%] mx-auto">
+        <h1 class="text-xl  md:text-2xl font-bold text-[#002C5C] mt-3 ">Job Application Tracker</h1>
 
-        <div  class="grid grid-cols-3 gap-4 mt-4">
+        <div  class="grid grid-cols-1  lg:grid-cols-3 gap-5 mt-4">
                 <!-- cart1 -->
                 <div  class="card bg-base-100 w-full shadow-sm hover:translate-y-0.5">
                     <div class="card-body">
@@ -53,13 +53,13 @@
     </header>
     <hr class="my-5 mt-4 w-[80%] mx-auto">
     <!-- main Section -->
-     <main class="mx-auto w-[80%]">
+     <main class="sm:w-[75%]  mx-auto  w-[80%]">
         <div class=" w-full" >
             <div class="w-full flex items-center justify-between mt-2.5 mb-2.5">
-                <h3 class="text-2xl font-bold text-black ">Available Jobs</h3>
+                <h3 class="text-xl  md:text-2xl font-bold text-black ">Available Jobs</h3>
                 <p id="jobCount"  class=" text-gray-500">0 jobs</p>
             </div>
-          <div >
+          <div class="sm:w-[70%]">
             <button onclick="toggleStyle('allFilter')" id="allFilter" class="bg-info btn bg-white-400  text-gray-500 hover:text-white ">All</button>
             <button onclick="toggleStyle('interviewFilter')" id="interviewFilter" class="btn bg-white-400  text-gray-500 hover:text-white ">Interview</button>
             <button onclick="toggleStyle('rejectedFilter')" id="rejectedFilter" class="btn bg-white-400  text-gray-500 hover:text-white ">Rejected</button>
@@ -67,7 +67,7 @@
         </div>
         <div id="card" class="jobcontainer mt-3 grid grid-cols-1 gap-4">
             <!-- cart-01 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -86,7 +86,7 @@
                    <div class="contains">
                     <button class="apply-status badge badge-outline badge-secondary">Not Applied</button>
                     <p class="job-Info text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -98,7 +98,7 @@
             </div>
             
             <!-- cart-02 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -117,7 +117,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -128,7 +128,7 @@
                  
             </div>
             <!-- cart-03 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -147,7 +147,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -158,7 +158,7 @@
                  
             </div>
             <!-- cart-04 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -177,7 +177,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -188,7 +188,7 @@
                  
             </div>
             <!-- cart-05 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -207,7 +207,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -218,7 +218,7 @@
                  
             </div>
             <!-- cart-06 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -237,7 +237,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -248,7 +248,7 @@
                  
             </div>
             <!-- cart-07 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -267,7 +267,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3">
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>
                         
@@ -278,7 +278,7 @@
                  
             </div>
             <!-- cart-08 -->
-            <div class="card1 card-border bg-base-100 w-full shadow-sm hover:translate-y-0.5">
+            <div class="card1 card-border bg-base-100 sm:w-[95%] lg:w-full mb-4 shadow-sm hover:translate-y-0.5">
                  <div class="card-body">
                    <div class="flex justify-between card-ditels">
                         <div class="contant">
@@ -297,7 +297,7 @@
                    <div class="contains">
                     <button class="apply-status apply-status badge badge-outline badge-secondary ">Not Applied</button>
                     <p class="job-Info text-gray-500">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
-                    <div class="buttons-container mt-3">
+                    <div class="buttons-container mt-3 flex flex-col lg:flex-row gap-3 ">
                         <div class=" badge badge-outline px-6 py-4 text-xl rounded-sm badge-accent interview hover:translate-y-0.5" >interview</div>
                         <div class="badge badge-outline px-6 py-4 text-xl rounded-sm badge-secondary Rejected hover:translate-y-0.5">Rejected</div>                   
                     </div>
@@ -310,7 +310,7 @@
      </main>
      <!-- hide div -->
       
-<div class= >
+<div  >
             <div id="nojobs" class="flex flex-col justify-center items-center  card border py-6  w-[80%] h-60 mx-auto  border-gray-200 bg-base-100 shadow-sm  ">
                 <div class="flex flex-col justify-center items-center">
                 <img
@@ -322,12 +322,6 @@
             </div>
            
 </div>
-
-
-        
-
- 
-    
 
      <script src="./script.js/script.js"></script>
 </body>
