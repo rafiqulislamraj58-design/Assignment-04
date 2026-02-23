@@ -2,13 +2,13 @@ let totalJob = document.getElementById('total');
 let appliedJob = document.getElementById('Interview');
 let rejectedJob = document.getElementById('Rejected');
 let cardSection = document.querySelector('#card')
-let allJobs = document.getElementById('jobCount')
+let jobCount = document.getElementById('jobCount')
 console.log(cardSection.children.length);
 // update total jobs
  function updatedJobs(){
      let total = document.getElementById('card').children.length;
      totalJob.innerText = total;
-     allJobs.innerText = total+" "+"Jobs";
+    jobCount.innerText = total+" "+"Jobs";
  }
 updatedJobs()
 // interview 
@@ -16,6 +16,9 @@ updatedJobs()
 document.getElementById('card').addEventListener('click',function(e){
     if(e.target.closest('.delete')){
         e.target.closest('.card1').remove();
+        if(document.querySelector('#card').children.length===0){
+            document.querySelector('#nojobs').style.display='block'
+        }
         updatedJobs()
     }
 })
@@ -59,50 +62,71 @@ function updateCount() {
      let cards = document.querySelectorAll('.card1');
     let interviwCount= 0;
     let rejectedCount= 0;
+    
     for (const card of cards) {
         
         if(card.querySelector('.apply-status').innerText==='Interview'){
             interviwCount++;
+          
             
             
         }else if(card.querySelector('.apply-status').innerText==='Rejected'){
             rejectedCount++;
+            
 
         }
+        
 }
+
     appliedJob.innerText = interviwCount;
     rejectedJob.innerText = rejectedCount;
 }
 // function for all filter
-function alljobs(status){
+function allJobs(status){
     let cards = document.querySelectorAll('.card1');
+    let count =0
     for (const card of cards) { 
         if(status==='All'){
             card.style.display='block';
+            count++;
         }else if(status==='Interview'){
             if(card.querySelector('.apply-status').innerText==='Interview'){
                 card.style.display='block';
+                count++;
             }else{
                 card.style.display='none';
             }
         }else if(status==='Rejected'){
             if(card.querySelector('.apply-status').innerText==='Rejected'){
                 card.style.display='block';
+                count++;
             }else{
                 card.style.display='none';
             }
         }
+       
     }
-
+     if (count===0) {
+            document.getElementById('nojobs').style.display='block'
+           
+        }
+         else {
+               document.getElementById('nojobs').style.display='none' 
+            }
+updatedJobs();
+updateCount();
 }
 document.getElementById('allFilter').addEventListener('click',function(){
-    alljobs('All');
+    allJobs('All');
+    toggleStyle('allFilter')
 });
 document.getElementById('interviewFilter').addEventListener('click',function(){
-    alljobs('Interview');
+    allJobs('Interview');
+    toggleStyle('interviewFilter');
 });
 document.getElementById('rejectedFilter').addEventListener('click',function(){
-    alljobs('Rejected');
+    allJobs('Rejected');
+    toggleStyle('rejectedFilter');
 });
 
 
