@@ -11,6 +11,7 @@ console.log(cardSection.children.length);
      allJobs.innerText = total+" "+"Jobs";
  }
 updatedJobs()
+// interview 
 // delte card 
 document.getElementById('card').addEventListener('click',function(e){
     if(e.target.closest('.delete')){
@@ -37,17 +38,76 @@ function toggleStyle(id){
     selectedButton.classList.remove('bg-white-300','text-gray')
     selectedButton.classList.add('bg-info','text-white');
 }
+// toggle style for all filter
 
+// badge status toggle
  cardSection.addEventListener('click',function(e){
-     if(e.target.closest('#interview')){
+     if(e.target.closest('.interview')){
         e.target.closest('.card1').querySelector('.apply-status').innerText ="Interview";
-        e.target.closest('.card1').querySelector('.apply-status').classList.remove('bg-gray-300','text-gray');
-        e.target.closest('.card1').querySelector('.apply-status').classList.add('bg-green-300','text-green');
-     }else if(e.target.closest('#Rejected')){
+        e.target.closest('.card1').querySelector('.apply-status').classList.remove('badge-outline' ,'badge-secondary','text-red-500');
+        e.target.closest('.card1').querySelector('.apply-status').classList.add('cursor-pointer','badge-outline', 'badge-accent','text-green-500');
+     }else if(e.target.closest('.Rejected')){
         e.target.closest(".card1").querySelector('.apply-status').innerText ="Rejected";
-        e.target.closest('.card1').querySelector('.apply-status').classList.remove('bg-gray-300','text-gray');
-        e.target.closest('.card1').querySelector('.apply-status').classList.add('bg-red-300','text-red');
+        e.target.closest('.card1').querySelector('.apply-status').classList.remove('badge-outline', 'badge-accent','text-green-500');
+        e.target.closest('.card1').querySelector('.apply-status').classList.add('cursor-pointer','badge-outline', 'badge-secondary','text-red-500');
      }
-     
-
+  updateCount();
  })
+;
+//  update count 
+function updateCount() {
+     let cards = document.querySelectorAll('.card1');
+    let interviwCount= 0;
+    let rejectedCount= 0;
+    for (const card of cards) {
+        
+        if(card.querySelector('.apply-status').innerText==='Interview'){
+            interviwCount++;
+            
+            
+        }else if(card.querySelector('.apply-status').innerText==='Rejected'){
+            rejectedCount++;
+
+        }
+}
+    appliedJob.innerText = interviwCount;
+    rejectedJob.innerText = rejectedCount;
+}
+// function for all filter
+function alljobs(status){
+    let cards = document.querySelectorAll('.card1');
+    for (const card of cards) { 
+        if(status==='All'){
+            card.style.display='block';
+        }else if(status==='Interview'){
+            if(card.querySelector('.apply-status').innerText==='Interview'){
+                card.style.display='block';
+            }else{
+                card.style.display='none';
+            }
+        }else if(status==='Rejected'){
+            if(card.querySelector('.apply-status').innerText==='Rejected'){
+                card.style.display='block';
+            }else{
+                card.style.display='none';
+            }
+        }
+    }
+
+}
+document.getElementById('allFilter').addEventListener('click',function(){
+    alljobs('All');
+});
+document.getElementById('interviewFilter').addEventListener('click',function(){
+    alljobs('Interview');
+});
+document.getElementById('rejectedFilter').addEventListener('click',function(){
+    alljobs('Rejected');
+});
+
+
+
+
+
+
+
