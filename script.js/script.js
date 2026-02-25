@@ -1,8 +1,9 @@
 let totalJob = document.getElementById('total');
 let appliedJob = document.getElementById('Interview');
 let rejectedJob = document.getElementById('Rejected');
-let cardSection = document.querySelector('#card')
-let jobCount = document.getElementById('jobCount')
+let cardSection = document.querySelector('#card');
+let jobCount = document.getElementById('jobCount');
+let currentFilter = 'All';
 console.log(cardSection.children.length);
 // update total jobs
  function updatedJobs(){
@@ -56,6 +57,7 @@ function toggleStyle(id){
         e.target.closest('.card1').querySelector('.apply-status').classList.add('cursor-pointer','badge-outline', 'badge-secondary','text-red-500');
      }
   updateCount();
+  allJobs(currentFilter);
  })
 ;
 //  update count 
@@ -89,6 +91,7 @@ function updateCount() {
 }
 // function for all filter
 function allJobs(status){
+    currentFilter = status;
     let cards = document.querySelectorAll('.card1');
     let count =0
     for (const card of cards) { 
